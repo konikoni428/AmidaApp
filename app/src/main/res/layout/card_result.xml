@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/cardViewSecond"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textViewSecond" android:textSize="24sp"
+                    android:layout_marginLeft="8dp" android:padding="8dp"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" android:id="@+id/cardViewFirst" app:cardCornerRadius="5dp"
+        >
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textViewFirst" android:textSize="24sp"
+                    android:layout_marginLeft="8dp" android:padding="8dp"/>
+        </androidx.cardview.widget.CardView>
+        <View
+                android:id="@+id/divider"
+                android:layout_height="4dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintEnd_toStartOf="@+id/cardViewSecond"
+                app:layout_constraintStart_toEndOf="@+id/cardViewFirst"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_width="0dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
